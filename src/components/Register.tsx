@@ -1,6 +1,5 @@
 import * as React from "react";
 import api from "./api";
-import CurrentUserContext, { UserType } from "./CurrentUserContext";
 
 type UserForm = {
   isSubmitting: boolean;
@@ -8,7 +7,6 @@ type UserForm = {
   password: string;
 };
 export default function Register() {
-  const { setCurrentUser } = React.useContext(CurrentUserContext);
   const [formData, setFormData] = React.useState<UserForm>({
     isSubmitting: false,
     email: "",
@@ -41,7 +39,7 @@ export default function Register() {
         .then(
           async (response: {
             data: {
-              user?: UserType;
+              user?: any;
               id?: string;
             };
           }) => {
@@ -50,7 +48,6 @@ export default function Register() {
 
             if (user) {
               localStorage.setItem("bottega_workshop_token", id);
-              setCurrentUser(user);
             } else {
               handleError("An error occurred");
             }
