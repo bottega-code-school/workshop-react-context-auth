@@ -1,10 +1,7 @@
-# API Introduction for JavaScript/TypeScript/React
+# How to Utilize React’s Context API to Build a Login Form
 
-## Workshop objectives
+> After completing this workshop, you will be able to:
 
-- [ ] Build a function that retrieves data from an API
-- [ ] Implement a JSON parsing system for extracting data from an API
-- [ ] Populate API data into a component's state using React hooks
-- [ ] Render API data onto the screen
-
-> Provided for the students of the [Bottega Code School](https://bottega.tech/)
+- Create React Context and Provider components to share data throughout an application.
+- Render the pages a user can access based on a user’s login status.
+- Build a login form that communicates with an API server to create a secure authentication session.
